@@ -28,15 +28,11 @@ class Gossip
 
 	# Trouver l'id du gossip
 
-	def self.find(id)
-		gossips = self.all
-		n = id.to_i - 1
-		n = n - 1
-		
-		puts "#{gossips[n].author}"
-		puts "#{gossips[n].content}"
-		
-		return gossips[n]
+	def self.find (id)
+    	all_gossips = self.all
+    	return all_gossips[id.to_i]
+	end
+	
 	end
 end
 
